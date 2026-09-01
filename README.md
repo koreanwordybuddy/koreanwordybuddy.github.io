@@ -4,7 +4,7 @@
 
 No ads. No sign-up. No tracking. Works on any phone or computer.
 
-👉 **[Try it live](https://miheehwang0229-maker.github.io/korean-wordy-buddy/)**
+👉 **[Try it live](https://koreanwordybuddy.github.io/)**
 
 ## What it does
 
@@ -22,7 +22,7 @@ This started as a project for kids in our family growing up outside Korea... the
 It's a static site — no build step, no dependencies.
 
 ```
-git clone https://github.com/miheehwang0229-maker/korean-wordy-buddy.git
+git clone https://github.com/koreanwordybuddy/koreanwordybuddy.github.io.git
 cd korean-wordy-buddy
 python -m http.server 8000
 ```
