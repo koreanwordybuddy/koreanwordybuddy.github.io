@@ -29,6 +29,13 @@
   .tx span{display:block;color:var(--sub);font-size:.9rem;margin-top:2px}
   .link .go{font-size:1.3rem;color:var(--sub);flex:none}
   .em.c1{background:#fff0eb}.em.c2{background:#f1ecff}.em.c3{background:#e4f6fb}
+  .levels{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .levels a{background:var(--card);border-radius:16px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);padding:16px 8px;text-align:center;display:flex;flex-direction:column;gap:2px;transition:transform .12s}
+  .levels a:active{transform:scale(.96)}
+  .levels a b{font-size:1.6rem;font-weight:900}
+  .levels a .lb{font-size:.72rem;color:var(--sub)}
+  .levels a .lp{font-size:.82rem;font-weight:800;color:var(--coral);margin-top:4px}
+  .levels a.l1 b{color:#3f93bc}.levels a.l2 b{color:#da6b3d}.levels a.l3 b{color:#e0559c}
   .badge{position:absolute;top:-9px;right:16px;background:var(--coral);color:#fff;font-size:.72rem;font-weight:800;padding:5px 11px;border-radius:999px;box-shadow:var(--shadow)}
 
   details.songs{background:var(--card);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
@@ -63,12 +70,18 @@
       <span class="go">→</span>
     </a>
 
-    <a class="link" href="https://payhip.com/b/8Osya" target="_blank" rel="noopener">
-      <span class="badge">🎉 code KPOP · $1 off</span>
-      <span class="em c2">📘</span>
-      <span class="tx"><b>The Illustrated Ebook</b><span>100 words + 100 printable flashcards · $4.99</span></span>
+    <a class="link" href="https://payhip.com/b/YDmgz" target="_blank" rel="noopener">
+      <span class="badge">🎉 best value · code KPOP</span>
+      <span class="em c2">📚</span>
+      <span class="tx"><b>The Complete Series</b><span>3 books · 300 words + flashcards · $9.99</span></span>
       <span class="go">→</span>
     </a>
+
+    <div class="levels">
+      <a class="l1" href="https://payhip.com/b/8Osya" target="_blank" rel="noopener"><b>100</b><span class="lb">first words</span><span class="lp">$4.99</span></a>
+      <a class="l2" href="https://payhip.com/b/oXuAR" target="_blank" rel="noopener"><b>200</b><span class="lb">everyday life</span><span class="lp">$4.99</span></a>
+      <a class="l3" href="https://payhip.com/b/ztHOC" target="_blank" rel="noopener"><b>300</b><span class="lb">real life</span><span class="lp">$4.99</span></a>
+    </div>
 
     <details class="songs">
       <summary>
