@@ -39,7 +39,7 @@ The words pair with original Korean learning songs by OKTAV MUSIC — stream the
 
 ## The picture book 📘
 
-If your family wants more, there's an illustrated companion ebook — labeled scene illustrations for every room of the house, printable flashcards, and all 100 words: **[Korean Wordy Buddy ebook](GUMROAD_URL)**. Buying it supports keeping this tool free.
+Want more? There's an illustrated companion ebook — labeled scene illustrations of Korean daily life, 100 printable flashcards, and all 100 words: **[Korean Wordy Buddy 100](https://payhip.com/b/8Osya)**. Buying it keeps this tool free.
 
 ## License
 
