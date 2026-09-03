@@ -15,7 +15,10 @@
   body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
   .wrap{max-width:520px;margin:0 auto;padding:34px 18px 60px}
   header{text-align:center}
-  .logo{font-size:2.6rem;line-height:1}
+  .logo{line-height:1}
+  .logo img{width:104px;height:auto;border-radius:12px;box-shadow:0 6px 18px rgba(58,51,69,.22)}
+  .quote{text-align:center;font-style:italic;color:var(--sub);font-size:.92rem;margin-top:32px;line-height:1.5;padding:0 10px}
+  .quote span{display:block;font-style:normal;font-weight:700;margin-top:5px;font-size:.78rem;color:var(--ink)}
   header h1{font-size:1.75rem;letter-spacing:-.5px;margin-top:8px;line-height:1.15}
   header h1 b{color:var(--coral)}
   header .kr{color:var(--ink);margin-top:12px;font-size:1.12rem;font-weight:800}
@@ -73,7 +76,7 @@
 <div class="wrap">
 
   <header>
-    <div class="logo">📚</div>
+    <div class="logo"><img src="covers/bundle.jpg" alt="Korean Wordy Buddy ebooks"></div>
     <h1>All About <b>Korean Words 300</b></h1>
     <div class="kr">One day, or day 1? 🇰🇷</div>
     <div class="en">Someday you'll learn Korean — or you start today.</div>
@@ -147,8 +150,13 @@
 
   </div>
 
+  <div class="quote">
+    "The limits of my language mean the limits of my world."
+    <span>— Ludwig Wittgenstein</span>
+  </div>
+
   <footer>
-    Made with ❤️ for everyone learning Korean.<br>
+    It all starts with a word. 모든 것의 출발은 단어.<br>
     Songs by OKTAV MUSIC.
   </footer>
 </div>
