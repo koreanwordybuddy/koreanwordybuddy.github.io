@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Korean Wordy Buddy</title>
-<meta name="description" content="Learn Korean, one word at a time. Free flashcard app, illustrated ebook, and original Korean learning songs.">
+<title>All About Korean Words 300</title>
+<meta name="description" content="Master 300 essential Korean words with illustrated ebooks, a free printable writing worksheet, and original Korean learning songs.">
 <style>
   :root{
     --bg:#FFF8EF; --card:#ffffff; --ink:#3a3345; --sub:#8b8098;
@@ -13,36 +13,48 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
-  .wrap{max-width:520px;margin:0 auto;padding:36px 18px 60px}
+  .wrap{max-width:520px;margin:0 auto;padding:34px 18px 60px}
   header{text-align:center}
-  .logo{font-size:3rem;line-height:1}
-  header h1{font-size:1.9rem;letter-spacing:-.5px;margin-top:8px}
-  header p{color:var(--sub);margin-top:8px;font-size:1rem}
+  .logo{font-size:2.6rem;line-height:1}
+  header h1{font-size:1.75rem;letter-spacing:-.5px;margin-top:8px;line-height:1.15}
+  header h1 b{color:var(--coral)}
+  header .kr{color:var(--ink);margin-top:12px;font-size:1.12rem;font-weight:800}
+  header .en{color:var(--sub);margin-top:4px;font-size:.92rem}
   .handle{display:inline-block;margin-top:12px;color:var(--purple);font-weight:800;font-size:.95rem;text-decoration:none}
 
-  .cards{display:flex;flex-direction:column;gap:16px;margin-top:30px}
-  .link{display:flex;align-items:center;gap:16px;background:var(--card);border:none;border-radius:20px;padding:20px 20px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);transition:transform .12s;position:relative}
+  .shoptitle{text-align:center;font-weight:800;font-size:1.05rem;margin:30px 0 4px}
+  .promo{text-align:center;background:#fff0eb;color:var(--coral);font-weight:800;font-size:.9rem;border-radius:999px;padding:9px 14px;margin:10px auto 0;display:inline-block}
+  .promowrap{text-align:center}
+
+  .shop{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+  .book{display:block;background:var(--card);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;text-decoration:none;color:var(--ink);transition:transform .12s;position:relative}
+  .book:active{transform:scale(.97)}
+  .book img{width:100%;height:auto;display:block}
+  .book .cap{padding:11px 10px 13px;text-align:center}
+  .book .cap b{display:block;font-size:1rem;font-weight:800}
+  .book .cap .d{font-size:.78rem;color:var(--sub);margin-top:1px}
+  .book .cap .pr{display:block;color:var(--coral);font-weight:800;font-size:.92rem;margin-top:4px}
+  .book.bundle{grid-column:1 / -1;border:2px solid var(--coral)}
+  .book.bundle .row{display:flex;align-items:center;gap:14px;text-align:left;padding:12px}
+  .book.bundle img{width:96px;border-radius:10px}
+  .book.bundle .cap{padding:0;text-align:left;flex:1}
+  .book .tag{position:absolute;top:10px;left:10px;background:var(--coral);color:#fff;font-size:.7rem;font-weight:800;padding:4px 9px;border-radius:999px;box-shadow:var(--shadow)}
+
+  .cards{display:flex;flex-direction:column;gap:16px;margin-top:26px}
+  .link{display:flex;align-items:center;gap:16px;background:var(--card);border:none;border-radius:20px;padding:18px 20px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);transition:transform .12s;position:relative}
   .link:active{transform:scale(.98)}
-  .link .em{font-size:2.2rem;flex:none;width:56px;height:56px;display:grid;place-items:center;border-radius:16px}
+  .link .em{font-size:2rem;flex:none;width:54px;height:54px;display:grid;place-items:center;border-radius:16px}
   .link .tx{flex:1;min-width:0}
-  .tx b{display:block;font-size:1.15rem;font-weight:800}
-  .tx span{display:block;color:var(--sub);font-size:.9rem;margin-top:2px}
+  .tx b{display:block;font-size:1.12rem;font-weight:800}
+  .tx span{display:block;color:var(--sub);font-size:.88rem;margin-top:2px}
   .link .go{font-size:1.3rem;color:var(--sub);flex:none}
-  .em.c1{background:#fff0eb}.em.c2{background:#f1ecff}.em.c3{background:#e4f6fb}.em.c5{background:#eaf7ee}
-  .levels{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  .levels a{background:var(--card);border-radius:16px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);padding:16px 8px;text-align:center;display:flex;flex-direction:column;gap:2px;transition:transform .12s}
-  .levels a:active{transform:scale(.96)}
-  .levels a b{font-size:1.6rem;font-weight:900}
-  .levels a .lb{font-size:.72rem;color:var(--sub)}
-  .levels a .lp{font-size:.82rem;font-weight:800;color:var(--coral);margin-top:4px}
-  .levels a.l1 b{color:#3f93bc}.levels a.l2 b{color:#da6b3d}.levels a.l3 b{color:#e0559c}
-  .levhint{text-align:center;font-size:.8rem;color:var(--sub);margin:2px 0 -2px}
-  .badge{position:absolute;top:-9px;right:16px;background:var(--coral);color:#fff;font-size:.72rem;font-weight:800;padding:5px 11px;border-radius:999px;box-shadow:var(--shadow)}
+  .em.c5{background:#eaf7ee}.em.c3{background:#e4f6fb}
+  .badge{position:absolute;top:-9px;right:16px;background:var(--green);color:#fff;font-size:.72rem;font-weight:800;padding:5px 11px;border-radius:999px;box-shadow:var(--shadow)}
 
   details.songs{background:var(--card);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
-  details.songs summary{display:flex;align-items:center;gap:16px;padding:20px;cursor:pointer;list-style:none}
+  details.songs summary{display:flex;align-items:center;gap:16px;padding:18px 20px;cursor:pointer;list-style:none}
   details.songs summary::-webkit-details-marker{display:none}
-  details.songs summary .go{transition:transform .2s}
+  details.songs summary .go{transition:transform .2s;font-size:1.3rem;color:var(--sub)}
   details.songs[open] summary .go{transform:rotate(90deg)}
   .songlist{padding:0 16px 12px;display:flex;flex-direction:column;gap:2px}
   .songlist a{display:flex;justify-content:space-between;align-items:center;padding:13px 12px;border-radius:12px;text-decoration:none;color:var(--ink);font-weight:700;font-size:.98rem}
@@ -57,45 +69,51 @@
 <div class="wrap">
 
   <header>
-    <div class="logo">⭐</div>
-    <h1>Korean Wordy Buddy</h1>
-    <p>Learn Korean, one word at a time.</p>
+    <div class="logo">📚</div>
+    <h1>All About <b>Korean Words 300</b></h1>
+    <div class="kr">이것만 알면 한국 문제 없다!</div>
+    <div class="en">Master these 300 words — handle anything in Korea.</div>
     <a class="handle" href="https://www.tiktok.com/@koreanwordybuddy" target="_blank" rel="noopener">@koreanwordybuddy</a>
   </header>
 
-  <div class="cards">
+  <div class="shoptitle">📖 Get the illustrated ebooks</div>
+  <div class="promowrap"><span class="promo">🎉 launch week — use code KPOP for $1 off</span></div>
 
-    <a class="link" href="app.html">
-      <span class="em c1">🎮</span>
-      <span class="tx"><b>Free Flashcard App</b><span>100 words · quizzes · real audio · no ads</span></span>
-      <span class="go">→</span>
+  <div class="shop">
+    <a class="book" href="https://payhip.com/b/8Osya" target="_blank" rel="noopener">
+      <img src="covers/100.jpg" alt="Korean Wordy Buddy 100 cover">
+      <div class="cap"><b>Beginner</b><span class="d">Level 100 · first words</span><span class="pr">$4.99</span></div>
     </a>
+    <a class="book" href="https://payhip.com/b/oXuAR" target="_blank" rel="noopener">
+      <img src="covers/200.jpg" alt="Korean Wordy Buddy 200 cover">
+      <div class="cap"><b>Intermediate</b><span class="d">Level 200 · everyday life</span><span class="pr">$4.99</span></div>
+    </a>
+    <a class="book" href="https://payhip.com/b/ztHOC" target="_blank" rel="noopener">
+      <img src="covers/300.jpg" alt="Korean Wordy Buddy 300 cover">
+      <div class="cap"><b>Advanced</b><span class="d">Level 300 · real-life Korean</span><span class="pr">$4.99</span></div>
+    </a>
+    <a class="book bundle" href="https://payhip.com/b/YDmgz" target="_blank" rel="noopener">
+      <span class="tag">best value</span>
+      <div class="row">
+        <img src="covers/bundle.jpg" alt="Complete Series cover">
+        <div class="cap"><b>Complete Series · Beginner → Advanced</b><span class="d">3 ebooks (100+200+300) · 300 words + printable flashcards · PDF</span><span class="pr">$9.99 &nbsp;·&nbsp; save with code KPOP</span></div>
+      </div>
+    </a>
+  </div>
+
+  <div class="cards">
 
     <a class="link" href="worksheet.pdf" target="_blank" rel="noopener">
       <span class="badge">free</span>
       <span class="em c5">📝</span>
-      <span class="tx"><b>Alphabet Writing Worksheet</b><span>trace 가나다 · printable PDF</span></span>
+      <span class="tx"><b>Printable Writing Worksheet</b><span>trace 가나다 · free PDF</span></span>
       <span class="go">→</span>
     </a>
-
-    <a class="link" href="https://payhip.com/b/YDmgz" target="_blank" rel="noopener">
-      <span class="badge">🎉 Launching · $1 off · code KPOP</span>
-      <span class="em c2">📚</span>
-      <span class="tx"><b>The Complete Ebook Series</b><span>3 ebooks · PDF · 300 words + flashcards</span></span>
-      <span class="go">→</span>
-    </a>
-
-    <div class="levhint">or get one ebook at a time</div>
-    <div class="levels">
-      <a class="l1" href="https://payhip.com/b/8Osya" target="_blank" rel="noopener"><b>100</b><span class="lb">first words</span></a>
-      <a class="l2" href="https://payhip.com/b/oXuAR" target="_blank" rel="noopener"><b>200</b><span class="lb">everyday life</span></a>
-      <a class="l3" href="https://payhip.com/b/ztHOC" target="_blank" rel="noopener"><b>300</b><span class="lb">real life</span></a>
-    </div>
 
     <details class="songs">
       <summary>
         <span class="em c3">🎵</span>
-        <span class="tx"><b>Korean Learning Songs</b><span>13 songs by OKTAV MUSIC · stream anywhere</span></span>
+        <span class="tx"><b>Korean Songs 🌙</b><span>13 songs · save, download &amp; play on repeat · great for bedtime</span></span>
         <span class="go">›</span>
       </summary>
       <div class="songlist">
@@ -113,14 +131,14 @@
         <a href="https://ditto.fm/family-song-gajogsong" target="_blank" rel="noopener">Family Song <span class="ko">가족송</span></a>
         <a href="https://ditto.fm/number-song-susjasong" target="_blank" rel="noopener">Number Song <span class="ko">숫자송</span></a>
       </div>
-      <div class="songnote">on Spotify, YouTube Music, Apple Music &amp; more</div>
+      <div class="songnote">on Spotify, YouTube Music, Apple Music &amp; more — save or download in your music app</div>
     </details>
 
   </div>
 
   <footer>
     Made with ❤️ for everyone learning Korean.<br>
-    Songs by OKTAV MUSIC · App is free &amp; open source.
+    Songs by OKTAV MUSIC.
   </footer>
 </div>
 </body>
