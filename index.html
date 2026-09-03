@@ -26,19 +26,17 @@
   .promo{text-align:center;background:#fff0eb;color:var(--coral);font-weight:800;font-size:.9rem;border-radius:999px;padding:9px 14px;margin:10px auto 0;display:inline-block}
   .promowrap{text-align:center}
 
-  .shop{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
-  .book{display:block;background:var(--card);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;text-decoration:none;color:var(--ink);transition:transform .12s;position:relative}
-  .book:active{transform:scale(.97)}
-  .book img{width:100%;height:auto;display:block}
-  .book .cap{padding:11px 10px 13px;text-align:center}
-  .book .cap b{display:block;font-size:1rem;font-weight:800}
-  .book .cap .d{font-size:.78rem;color:var(--sub);margin-top:1px}
-  .book .cap .pr{display:block;color:var(--coral);font-weight:800;font-size:.92rem;margin-top:4px}
-  .book.bundle{grid-column:1 / -1;border:2px solid var(--coral)}
-  .book.bundle .row{display:flex;align-items:center;gap:14px;text-align:left;padding:12px}
-  .book.bundle img{width:96px;border-radius:10px}
-  .book.bundle .cap{padding:0;text-align:left;flex:1}
-  .book .tag{position:absolute;top:10px;left:10px;background:var(--coral);color:#fff;font-size:.7rem;font-weight:800;padding:4px 9px;border-radius:999px;box-shadow:var(--shadow)}
+  .shop{display:flex;flex-direction:column;gap:14px;margin-top:16px}
+  .book{display:flex;align-items:center;gap:16px;background:var(--card);border-radius:16px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);transition:transform .12s;position:relative;padding:14px 16px}
+  .book:active{transform:scale(.98)}
+  .book img{width:92px;height:auto;border-radius:9px;flex:none;box-shadow:0 3px 10px rgba(58,51,69,.18)}
+  .book .cap{flex:1;min-width:0}
+  .book .cap b{display:block;font-size:1.2rem;font-weight:800}
+  .book .cap .d{font-size:.86rem;color:var(--sub);margin-top:3px;line-height:1.35}
+  .book .cap .pr{display:block;color:var(--coral);font-weight:800;font-size:.98rem;margin-top:7px}
+  .book .go{margin-left:6px;color:var(--sub);font-size:1.25rem;flex:none}
+  .book.bundle{border:2px solid var(--coral)}
+  .book .tag{position:absolute;top:-9px;left:16px;background:var(--coral);color:#fff;font-size:.7rem;font-weight:800;padding:4px 10px;border-radius:999px;box-shadow:var(--shadow)}
 
   .cards{display:flex;flex-direction:column;gap:16px;margin-top:26px}
   .link{display:flex;align-items:center;gap:16px;background:var(--card);border:none;border-radius:20px;padding:18px 20px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);transition:transform .12s;position:relative}
@@ -71,8 +69,8 @@
   <header>
     <div class="logo">📚</div>
     <h1>All About <b>Korean Words 300</b></h1>
-    <div class="kr">이것만 알면 한국 문제 없다!</div>
-    <div class="en">Master these 300 words — handle anything in Korea.</div>
+    <div class="kr">이것만 알면 한국여행 문제 없다!</div>
+    <div class="en">Master these words — travel Korea with zero trouble.</div>
     <a class="handle" href="https://www.tiktok.com/@koreanwordybuddy" target="_blank" rel="noopener">@koreanwordybuddy</a>
   </header>
 
@@ -81,23 +79,25 @@
 
   <div class="shop">
     <a class="book" href="https://payhip.com/b/8Osya" target="_blank" rel="noopener">
-      <img src="covers/100.jpg" alt="Korean Wordy Buddy 100 cover">
-      <div class="cap"><b>Beginner</b><span class="d">Level 100 · first words</span><span class="pr">$4.99</span></div>
+      <img src="covers/100.jpg" alt="Level 100 cover">
+      <div class="cap"><b>Beginner</b><span class="d">Level 100 · your first Korean words</span><span class="pr">$4.99</span></div>
+      <span class="go">→</span>
     </a>
     <a class="book" href="https://payhip.com/b/oXuAR" target="_blank" rel="noopener">
-      <img src="covers/200.jpg" alt="Korean Wordy Buddy 200 cover">
+      <img src="covers/200.jpg" alt="Level 200 cover">
       <div class="cap"><b>Intermediate</b><span class="d">Level 200 · everyday life</span><span class="pr">$4.99</span></div>
+      <span class="go">→</span>
     </a>
     <a class="book" href="https://payhip.com/b/ztHOC" target="_blank" rel="noopener">
-      <img src="covers/300.jpg" alt="Korean Wordy Buddy 300 cover">
+      <img src="covers/300.jpg" alt="Level 300 cover">
       <div class="cap"><b>Advanced</b><span class="d">Level 300 · real-life Korean</span><span class="pr">$4.99</span></div>
+      <span class="go">→</span>
     </a>
     <a class="book bundle" href="https://payhip.com/b/YDmgz" target="_blank" rel="noopener">
       <span class="tag">best value</span>
-      <div class="row">
-        <img src="covers/bundle.jpg" alt="Complete Series cover">
-        <div class="cap"><b>Complete Series · Beginner → Advanced</b><span class="d">3 ebooks (100+200+300) · 300 words + printable flashcards · PDF</span><span class="pr">$9.99 &nbsp;·&nbsp; save with code KPOP</span></div>
-      </div>
+      <img src="covers/bundle.jpg" alt="Complete Series cover">
+      <div class="cap"><b>Complete Series</b><span class="d">Beginner → Advanced · 3 ebooks · 300 words + flashcards · PDF</span><span class="pr">$9.99 · save with code KPOP</span></div>
+      <span class="go">→</span>
     </a>
   </div>
 
