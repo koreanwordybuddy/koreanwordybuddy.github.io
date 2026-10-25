@@ -3,175 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>All About Korean Words 300</title>
-<meta name="description" content="Master 300 essential Korean words with illustrated ebooks, a free printable writing worksheet, and original Korean learning songs.">
+<meta name="theme-color" content="#1d1736">
+<title>Korean Wordy Buddy · free Korean word game</title>
+<meta name="description" content="Learn Hangul and 150 Korean words with a free arcade style game. Flashcards, quizzes, real Korean audio. Illustrated ebooks too.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#FFF8EF; --card:#ffffff; --ink:#3a3345; --sub:#8b8098;
-    --coral:#ff7a59; --purple:#7c5cff; --blue:#38b6d8; --gold:#e69614; --green:#2fbf71;
-    --shadow:0 6px 20px rgba(58,51,69,.10);
+    --night:#1d1736; --ink:#241d33; --sub:#6e6580; --cream:#fff8ec;
+    --coral:#f2774a; --yellow:#ffc93c; --purple:#6d4dff; --green:#2fbf71;
+    --px:"Press Start 2P",ui-monospace,monospace;
+    --ko:"Jua","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    --hard:0 4px 0 var(--ink);
   }
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
-  .wrap{max-width:520px;margin:0 auto;padding:34px 18px 60px}
+  html{background:var(--night)}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#fff;min-height:100vh;
+       background:radial-gradient(circle at 50% -10%,#3a2d6b 0,var(--night) 60%) fixed;background-color:var(--night)}
+  .wrap{max-width:480px;margin:0 auto;padding:30px 16px 48px}
+  a{color:inherit}
+
   header{text-align:center}
-  .logo{line-height:1}
-  .logo img{width:104px;height:auto;border-radius:12px;box-shadow:0 6px 18px rgba(58,51,69,.22)}
-  .quote{text-align:center;font-style:italic;color:var(--sub);font-size:.92rem;margin-top:32px;line-height:1.5;padding:0 10px}
-  .quote span{display:block;font-style:normal;font-weight:700;margin-top:5px;font-size:.78rem;color:var(--ink)}
-  header h1{font-size:clamp(1.35rem,6.2vw,1.85rem);letter-spacing:-.4px;margin-top:10px;line-height:1.2;white-space:nowrap}
-  header h1 b{color:var(--coral)}
-  header .madeby{color:var(--ink);margin-top:7px;font-size:.95rem;font-weight:700}
-  header .kr{color:var(--ink);margin-top:12px;font-size:1.12rem;font-weight:800}
-  header .en{color:var(--sub);margin-top:4px;font-size:.92rem}
-  .handle{display:inline-block;margin-top:12px;color:var(--purple);font-weight:800;font-size:.82rem;text-decoration:none}
-  .madeby{margin-top:9px;color:var(--ink);font-size:.86rem;font-weight:700}
-  .feat{text-align:center;margin-top:24px;background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:16px 14px}
-  .feat .big{font-size:1.06rem;font-weight:800}
-  .feat .big b{color:var(--coral)}
-  .feat .big .pl{color:var(--sub);font-weight:700}
-  .feat span{display:block;color:var(--sub);font-size:.85rem;margin-top:4px}
+  .handle{font-weight:800;font-size:.85rem;color:#c9bfe6;text-decoration:none}
+  h1{font-family:var(--px);font-size:1.15rem;line-height:1.55;margin-top:14px;text-shadow:3px 3px 0 #8e3a1d}
+  h1 b{color:var(--yellow)}
+  .sub{font-family:var(--ko);font-size:1.35rem;color:#ffd9c9;margin-top:10px}
 
-  .shoptitle{text-align:center;font-weight:800;font-size:1.05rem;margin:30px 0 4px}
-  .promo{text-align:center;background:#fff0eb;color:var(--coral);font-weight:800;font-size:.9rem;border-radius:999px;padding:9px 14px;margin:10px auto 0;display:inline-block}
-  .promowrap{text-align:center}
+  /* hero: the one main door */
+  .play{display:block;margin-top:24px;background:linear-gradient(180deg,#f7875c,var(--coral) 45%,#c95730);border-radius:24px;padding:14px;text-decoration:none;color:var(--ink);
+        box-shadow:0 8px 0 #8e3a1d,0 20px 40px rgba(0,0,0,.4);transition:transform .08s}
+  .play:active{transform:translateY(4px);box-shadow:0 4px 0 #8e3a1d}
+  .scr{background:#2b2440;border-radius:16px;padding:10px}
+  .scr .in{background:var(--cream);border-radius:9px;padding:22px 14px 20px;text-align:center}
+  .scr .ko{font-family:var(--ko);font-size:3.4rem;line-height:1.1}
+  .scr .ko span{color:var(--coral)}
+  .scr .tags{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:12px}
+  .scr .tags i{font-style:normal;font-size:.78rem;font-weight:800;background:#f1ebff;border-radius:999px;padding:4px 10px}
+  .btn{display:block;margin:14px 4px 4px;text-align:center;background:var(--yellow);border:3px solid var(--ink);border-radius:14px;padding:16px 10px;
+       font-family:var(--px);font-size:.85rem;box-shadow:var(--hard)}
+  .btn b{animation:blink 1s steps(2) infinite}
+  @keyframes blink{50%{opacity:0}}
+  .free{text-align:center;color:#c9bfe6;font-size:.88rem;font-weight:700;margin-top:14px}
 
-  .shop{display:flex;flex-direction:column;gap:14px;margin-top:16px}
-  .book{display:flex;align-items:center;gap:16px;background:var(--card);border-radius:16px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);transition:transform .12s;position:relative;padding:14px 16px}
-  .book:active{transform:scale(.98)}
-  .book img{width:92px;height:auto;border-radius:9px;flex:none;box-shadow:0 3px 10px rgba(58,51,69,.18)}
-  .book .cap{flex:1;min-width:0}
-  .book .cap b{display:block;font-size:1.2rem;font-weight:800}
-  .book .cap .d{font-size:.86rem;color:var(--sub);margin-top:3px;line-height:1.35}
-  .book .cap .pr{display:block;color:var(--coral);font-weight:800;font-size:.98rem;margin-top:7px}
-  .book .cap .pr .was{text-decoration:line-through;color:#b8aeb8;font-weight:700;margin-right:5px}
-  .book .cap .pr .saveln{display:block;font-size:.8rem;font-weight:800;color:var(--sub);margin-top:1px}
-  .book .go{margin-left:6px;color:var(--sub);font-size:1.25rem;flex:none}
-  .book.bundle{border:2px solid var(--coral)}
-  .book .tag{position:absolute;top:-9px;left:16px;background:var(--coral);color:#fff;font-size:.7rem;font-weight:800;padding:4px 10px;border-radius:999px;box-shadow:var(--shadow)}
+  /* books: one card */
+  .label{font-family:var(--px);font-size:.6rem;color:#a99fcc;text-align:center;margin:40px 0 14px;letter-spacing:1px}
+  .book{display:flex;align-items:center;gap:14px;background:var(--cream);color:var(--ink);border:3px solid var(--ink);border-radius:18px;padding:14px;text-decoration:none;box-shadow:0 5px 0 #000;position:relative}
+  .book:active{transform:translateY(3px)}
+  .book img{width:92px;border-radius:8px;flex:none}
+  .book b{display:block;font-size:1.15rem}
+  .book .d{display:block;font-size:.85rem;color:var(--sub);margin-top:3px;line-height:1.35}
+  .book .pr{display:block;margin-top:8px;font-weight:900;color:var(--coral);font-size:1.15rem}
+  .book .pr s{color:#b8aeb8;font-weight:700;font-size:.9rem;margin-right:4px}
+  .book .tag{position:absolute;top:-11px;right:14px;background:var(--yellow);border:2px solid var(--ink);font-size:.7rem;font-weight:900;padding:3px 9px;border-radius:999px}
+  .singles{text-align:center;font-size:.86rem;color:#c9bfe6;margin-top:14px;line-height:1.8}
+  .singles a{color:#fff;font-weight:800}
 
-  .cards{display:flex;flex-direction:column;gap:16px;margin-top:26px}
-  .link{display:flex;align-items:center;gap:16px;background:var(--card);border:none;border-radius:20px;padding:18px 20px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);transition:transform .12s;position:relative}
-  .link:active{transform:scale(.98)}
-  .link .em{font-size:2rem;flex:none;width:54px;height:54px;display:grid;place-items:center;border-radius:16px}
-  .link .tx{flex:1;min-width:0}
-  .tx b{display:block;font-size:1.12rem;font-weight:800}
-  .tx span{display:block;color:var(--sub);font-size:.88rem;margin-top:2px}
-  .link .go{font-size:1.3rem;color:var(--sub);flex:none}
-  .em.c5{background:#eaf7ee}.em.c3{background:#e4f6fb}
-  .badge{position:absolute;top:-9px;right:16px;background:var(--green);color:#fff;font-size:.72rem;font-weight:800;padding:5px 11px;border-radius:999px;box-shadow:var(--shadow)}
-
-  details.songs{background:var(--card);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
-  details.songs summary{display:flex;align-items:center;gap:16px;padding:18px 20px;cursor:pointer;list-style:none}
-  details.songs summary::-webkit-details-marker{display:none}
-  details.songs summary .go{transition:transform .2s;font-size:1.3rem;color:var(--sub)}
-  details.songs[open] summary .go{transform:rotate(90deg)}
-  .songlist{padding:0 16px 12px;display:flex;flex-direction:column;gap:2px}
-  .songlist a{display:flex;justify-content:space-between;align-items:center;padding:13px 12px;border-radius:12px;text-decoration:none;color:var(--ink);font-weight:700;font-size:.98rem}
-  .songlist a:active{background:#f6f2ff}
-  .songlist a .ko{color:var(--sub);font-weight:600;font-size:.85rem}
-  .songnote{text-align:center;color:var(--sub);font-size:.8rem;padding:4px 0 10px}
-
-  footer{text-align:center;color:var(--sub);font-size:.82rem;margin-top:34px;line-height:1.7}
-  .playbtn{display:flex;align-items:center;gap:14px;margin:16px 0 4px;padding:16px 18px;border-radius:20px;text-decoration:none;color:#fff;background:linear-gradient(135deg,#ff7a59,#ffb259);box-shadow:0 8px 24px rgba(255,122,89,.35)}
-  .playbtn .pe{font-size:2rem}
-  .playbtn .pt{flex:1;display:flex;flex-direction:column;text-align:left}
-  .playbtn .pt b{font-size:1.08rem}
-  .playbtn .pt span{font-size:.82rem;opacity:.95;margin-top:3px}
-  .playbtn .go{font-size:1.3rem;font-weight:900}
+  /* little extras */
+  .extras{display:flex;justify-content:center;gap:10px;margin-top:40px;flex-wrap:wrap}
+  .extras a,.extras summary{display:inline-block;font-size:.85rem;font-weight:800;color:#ddd5f5;text-decoration:none;border:2px solid #4a3d7a;border-radius:999px;padding:8px 14px;cursor:pointer;list-style:none}
+  .extras summary::-webkit-details-marker{display:none}
+  details[open] summary{background:#2b2348}
+  .songlist{margin-top:10px;display:flex;flex-direction:column;gap:2px;background:#2b2348;border-radius:14px;padding:8px}
+  .songlist a{border:none;border-radius:10px;padding:10px 12px;display:flex;justify-content:space-between}
+  .songlist a span{color:#a99fcc;font-weight:600}
+  details{width:100%;text-align:center}
+  footer{text-align:center;color:#8f86b3;font-size:.8rem;margin-top:30px;line-height:1.7}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header>
-    <div class="logo"><img src="covers/bundle.jpg" alt="Korean Wordy Buddy ebooks"></div>
-    <h1>All About Korean Words <b>300</b></h1>
-    <div class="madeby">Made by a native Korean speaker 🇰🇷</div>
     <a class="handle" href="https://www.tiktok.com/@koreanwordybuddy" target="_blank" rel="noopener">@koreanwordybuddy</a>
+    <h1>KOREAN <b>WORDY</b><br>BUDDY</h1>
+    <div class="sub">learn korean with a game 🎮</div>
   </header>
 
-  <a class="playbtn" href="app.html">
-    <span class="pe">🎮</span>
-    <span class="pt"><b>Play the free Korean word game</b><span>가나다 + your first words · flashcards, quizzes, native audio</span></span>
-    <span class="go">▶</span>
+  <a class="play" href="app.html">
+    <div class="scr"><div class="in">
+      <div class="ko"><span>가</span>나다</div>
+      <div class="tags"><i>16 levels</i><i>150 words</i><i>native audio</i></div>
+    </div></div>
+    <div class="btn"><b>▶</b> PLAY FREE</div>
   </a>
+  <div class="free">3 levels free · no ads · no sign up</div>
 
-  <div class="feat">
-    <div class="big"><b>한국어</b> <span class="pl">+</span> romanization <span class="pl">+</span> English</div>
-    <span>every word 3 ways — read it, say it, understand it</span>
+  <div class="label">▼ WANT IT ON PAPER?</div>
+  <a class="book" href="https://payhip.com/b/YDmgz" target="_blank" rel="noopener">
+    <span class="tag">best value</span>
+    <img src="covers/bundle.jpg" alt="Korean Wordy Buddy complete series">
+    <span>
+      <b>Illustrated ebooks</b>
+      <span class="d">all 3 levels · 300 words · printable flashcards</span>
+      <span class="pr"><s>$3.00</s> $1.99</span>
+    </span>
+  </a>
+  <div class="singles">or one book for $1:
+    <a href="https://payhip.com/b/8Osya" target="_blank" rel="noopener">Beginner</a> ·
+    <a href="https://payhip.com/b/oXuAR" target="_blank" rel="noopener">Intermediate</a> ·
+    <a href="https://payhip.com/b/ztHOC" target="_blank" rel="noopener">Advanced</a>
   </div>
 
-  <div class="shoptitle">📖 Get the illustrated ebooks</div>
-  <div class="promowrap"><span class="promo">🔥 launch price — each ebook just $1 · all 3 for $1.99</span></div>
-
-  <div class="shop">
-    <a class="book" href="https://payhip.com/b/8Osya" target="_blank" rel="noopener">
-      <img src="covers/100.jpg" alt="Level 100 cover">
-      <div class="cap"><b>Beginner</b><span class="d">Level 100 · first words · 38 pages · 100 flashcards + bonus</span><span class="pr">$1.00</span></div>
-      <span class="go">→</span>
-    </a>
-    <a class="book" href="https://payhip.com/b/oXuAR" target="_blank" rel="noopener">
-      <img src="covers/200.jpg" alt="Level 200 cover">
-      <div class="cap"><b>Intermediate</b><span class="d">Level 200 · everyday life · 27 pages + bonus kit</span><span class="pr">$1.00</span></div>
-      <span class="go">→</span>
-    </a>
-    <a class="book" href="https://payhip.com/b/ztHOC" target="_blank" rel="noopener">
-      <img src="covers/300.jpg" alt="Level 300 cover">
-      <div class="cap"><b>Advanced</b><span class="d">Level 300 · real-life Korean · 27 pages + bonus kit</span><span class="pr">$1.00</span></div>
-      <span class="go">→</span>
-    </a>
-    <a class="book bundle" href="https://payhip.com/b/YDmgz" target="_blank" rel="noopener">
-      <span class="tag">best value</span>
-      <img src="covers/bundle.jpg" alt="Complete Series cover">
-      <div class="cap"><b>Complete Series</b><span class="d">Beginner → Advanced · 3 ebooks · 92 pages · 300 words + flashcards + bonus</span><span class="pr"><span class="was">$3.00</span>$1.99<span class="saveln">3 ebooks · best value</span></span></div>
-      <span class="go">→</span>
-    </a>
-  </div>
-
-  <div class="cards">
-
-    <a class="link" href="worksheet.pdf" target="_blank" rel="noopener">
-      <span class="badge">free</span>
-      <span class="em c5">📝</span>
-      <span class="tx"><b>Printable Writing Worksheet</b><span>trace 가나다 · free PDF</span></span>
-      <span class="go">→</span>
-    </a>
-
-    <details class="songs">
-      <summary>
-        <span class="em c3">🎵</span>
-        <span class="tx"><b>Korean Songs 🌙</b><span>13 songs · save, download &amp; play on repeat · great for bedtime</span></span>
-        <span class="go">›</span>
-      </summary>
+  <div class="extras">
+    <a href="worksheet.pdf" target="_blank" rel="noopener">📝 free 가나다 worksheet</a>
+    <details>
+      <summary>🎵 Korean songs</summary>
       <div class="songlist">
-        <a href="https://ditto.fm/ganada-song-kids-ver" target="_blank" rel="noopener">Ganada Song <span class="ko">가나다송</span></a>
-        <a href="https://ditto.fm/ganada-song-pop-version" target="_blank" rel="noopener">Ganada Song (Pop) <span class="ko">가나다송</span></a>
-        <a href="https://ditto.fm/i-love-you-salanghaeyo" target="_blank" rel="noopener">I Love You <span class="ko">사랑해요</span></a>
-        <a href="https://ditto.fm/hello-and-thank-you" target="_blank" rel="noopener">Hello &amp; Thank You <span class="ko">인사</span></a>
-        <a href="https://ditto.fm/color-song-saegkkalsong" target="_blank" rel="noopener">Color Song <span class="ko">색깔송</span></a>
-        <a href="https://ditto.fm/hello-song-insasong" target="_blank" rel="noopener">Hello Song <span class="ko">인사송</span></a>
-        <a href="https://ditto.fm/animal-song-dongmulsong" target="_blank" rel="noopener">Animal Song <span class="ko">동물송</span></a>
-        <a href="https://ditto.fm/body-song-momsong" target="_blank" rel="noopener">Body Song <span class="ko">몸송</span></a>
-        <a href="https://ditto.fm/feelings-song-gamjeongsong" target="_blank" rel="noopener">Feelings Song <span class="ko">감정송</span></a>
-        <a href="https://ditto.fm/days-song-yoilsong" target="_blank" rel="noopener">Days Song <span class="ko">요일송</span></a>
-        <a href="https://ditto.fm/food-song-eumsigsong" target="_blank" rel="noopener">Food Song <span class="ko">음식송</span></a>
-        <a href="https://ditto.fm/family-song-gajogsong" target="_blank" rel="noopener">Family Song <span class="ko">가족송</span></a>
-        <a href="https://ditto.fm/number-song-susjasong" target="_blank" rel="noopener">Number Song <span class="ko">숫자송</span></a>
+        <a href="https://ditto.fm/ganada-song-kids-ver" target="_blank" rel="noopener">Ganada Song <span>가나다송</span></a>
+        <a href="https://ditto.fm/ganada-song-pop-version" target="_blank" rel="noopener">Ganada Song (Pop) <span>가나다송</span></a>
+        <a href="https://ditto.fm/i-love-you-salanghaeyo" target="_blank" rel="noopener">I Love You <span>사랑해요</span></a>
+        <a href="https://ditto.fm/hello-and-thank-you" target="_blank" rel="noopener">Hello &amp; Thank You <span>인사</span></a>
+        <a href="https://ditto.fm/color-song-saegkkalsong" target="_blank" rel="noopener">Color Song <span>색깔송</span></a>
+        <a href="https://ditto.fm/hello-song-insasong" target="_blank" rel="noopener">Hello Song <span>인사송</span></a>
+        <a href="https://ditto.fm/animal-song-dongmulsong" target="_blank" rel="noopener">Animal Song <span>동물송</span></a>
+        <a href="https://ditto.fm/body-song-momsong" target="_blank" rel="noopener">Body Song <span>몸송</span></a>
+        <a href="https://ditto.fm/feelings-song-gamjeongsong" target="_blank" rel="noopener">Feelings Song <span>감정송</span></a>
+        <a href="https://ditto.fm/days-song-yoilsong" target="_blank" rel="noopener">Days Song <span>요일송</span></a>
+        <a href="https://ditto.fm/food-song-eumsigsong" target="_blank" rel="noopener">Food Song <span>음식송</span></a>
+        <a href="https://ditto.fm/family-song-gajogsong" target="_blank" rel="noopener">Family Song <span>가족송</span></a>
+        <a href="https://ditto.fm/number-song-susjasong" target="_blank" rel="noopener">Number Song <span>숫자송</span></a>
       </div>
-      <div class="songnote">on Spotify, YouTube Music, Apple Music &amp; more — save or download in your music app</div>
     </details>
-
-  </div>
-
-  <div class="quote">
-    "The limits of my language mean the limits of my world."
-    <span>— Ludwig Wittgenstein</span>
   </div>
 
   <footer>
-    It all starts with a word. 모든 것의 출발은 단어.<br>
-    Songs by OKTAV MUSIC.
+    made by a native Korean speaker 🇰🇷<br>
+    모든 것의 출발은 단어 · songs by OKTAV MUSIC
   </footer>
 </div>
 </body>
