@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#1d1736">
+<meta property="og:title" content="Korean Wordy Buddy · free Korean word game">
+<meta property="og:description" content="learn 가나다 + 150 Korean words with a free game. illustrated ebooks just $1.">
+<meta property="og:image" content="https://koreanwordybuddy.github.io/covers/game.png">
+<meta property="og:url" content="https://koreanwordybuddy.github.io/">
+<meta name="twitter:card" content="summary_large_image">
 <title>Korean Wordy Buddy · free Korean word game</title>
 <meta name="description" content="Learn Hangul and 150 Korean words with a free arcade style game. Flashcards, quizzes, real Korean audio. Illustrated ebooks too.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,6 +64,12 @@
   .singles{text-align:center;font-size:.86rem;color:#c9bfe6;margin-top:14px;line-height:1.8}
   .singles a{color:#fff;font-weight:800}
 
+  .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+  .trio a{background:var(--cream);color:var(--ink);border:3px solid var(--ink);border-radius:14px;padding:8px 6px 10px;text-align:center;text-decoration:none;box-shadow:0 4px 0 #000}
+  .trio a:active{transform:translateY(3px)}
+  .trio img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:7px;display:block}
+  .trio b{display:block;font-size:.85rem;margin-top:7px}
+  .trio span{display:block;font-size:.72rem;color:var(--coral);font-weight:900;margin-top:2px}
   /* little extras */
   .extras{display:flex;justify-content:center;gap:10px;margin-top:40px;flex-wrap:wrap}
   .extras a,.extras summary{display:inline-block;font-size:.85rem;font-weight:800;color:#ddd5f5;text-decoration:none;border:2px solid #4a3d7a;border-radius:999px;padding:8px 14px;cursor:pointer;list-style:none}
@@ -94,15 +105,16 @@
     <span class="tag">best value</span>
     <img src="covers/bundle.jpg" alt="Korean Wordy Buddy complete series">
     <span>
-      <b>Illustrated ebooks</b>
-      <span class="d">all 3 levels · 300 words · printable flashcards</span>
+      <b>Complete Series · 3 ebooks</b>
+      <span class="d">all 3 books · 100 + 200 + 300 · printable flashcards</span>
       <span class="pr"><s>$3.00</s> $1.99</span>
     </span>
   </a>
-  <div class="singles">or one book for $1:
-    <a href="https://payhip.com/b/8Osya" target="_blank" rel="noopener">Beginner</a> ·
-    <a href="https://payhip.com/b/oXuAR" target="_blank" rel="noopener">Intermediate</a> ·
-    <a href="https://payhip.com/b/ztHOC" target="_blank" rel="noopener">Advanced</a>
+  <div class="singles">or one book for $1</div>
+  <div class="trio">
+    <a href="https://payhip.com/b/8Osya" target="_blank" rel="noopener"><img src="covers/100.jpg" alt="Level 100"><b>Beginner</b><span>first words · $1</span></a>
+    <a href="https://payhip.com/b/oXuAR" target="_blank" rel="noopener"><img src="covers/200.jpg" alt="Level 200"><b>Intermediate</b><span>everyday · $1</span></a>
+    <a href="https://payhip.com/b/ztHOC" target="_blank" rel="noopener"><img src="covers/300.jpg" alt="Level 300"><b>Advanced</b><span>real life · $1</span></a>
   </div>
 
   <div class="extras">
